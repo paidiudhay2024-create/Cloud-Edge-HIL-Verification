@@ -13,5 +13,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Display Message
-        run: echo "Cloud Verification Started Successfully!"
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Verification
+        run: python Verification/verify.py
