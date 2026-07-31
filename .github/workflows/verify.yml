@@ -1,0 +1,17 @@
+name: Cloud Verification
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Message
+        run: echo "Cloud Verification Started Successfully!"
